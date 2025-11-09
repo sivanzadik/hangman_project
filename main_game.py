@@ -28,3 +28,13 @@ def print_hidden_word(word):
 
 if __name__ == '__main__':
     print(choose_a_random_word(list_of_words))
+
+
+def ask_for_letter():
+    while True:
+        letter = input("Please enter a single letter (A–Z): ")
+        if len(letter) == 1 and letter.isalpha():
+            print(f"You entered: {letter}")
+            break
+        else:
+            print("Invalid input. Please enter just one alphabetic letter.")
