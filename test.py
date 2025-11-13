@@ -1,0 +1,1 @@
+from common.ascii_art import hangman_7_stages
