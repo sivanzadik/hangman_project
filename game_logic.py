@@ -7,7 +7,7 @@
 # Return True if the letter is in the word, False otherwise.
 
 def check_letter_in_word(letter, word):
-    ...
+    return letter in word
 
 
 # --- FUNCTION 2 ---
@@ -68,8 +68,8 @@ if __name__ == "__main__":
     ### --- Test Function 1: check_letter_in_word --- ###
     
     ###Test 1.1###
-    # result = check_letter_in_word("p", "python")
-    # print(result)  # Expected: True
+    result = check_letter_in_word("p", "python")
+    print(result)  # Expected: True
     
     ###Test 1.2###
     # result = check_letter_in_word("x", "python")
