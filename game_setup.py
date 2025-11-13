@@ -8,12 +8,9 @@ import random
 # The function receives a list of words and returns one random word.
 
 def choose_random_word(word_list):
-    # OP1
-    # random.choice(...)
 
-    # OP2
-    # random.randrange()
-    ...
+    return random.choice(word_list)
+
 
 # --- FUNCTION 2 ---
 # Write a function that gets a word, and returns a set of all the unique letters in that word.
