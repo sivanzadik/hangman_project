@@ -8,7 +8,7 @@
 # Return True if won, False otherwise.
 
 def check_win_condition(hidden_letters):
-    ...
+    return len(hidden_letters) == 0
 
 
 # --- FUNCTION 2 ---
@@ -17,7 +17,7 @@ def check_win_condition(hidden_letters):
 # Return True if lost, False otherwise.
 
 def check_lose_condition(attempts_remaining):
-    ...
+    return attempts_remaining == 0
 
 
 # --- FUNCTION 3 ---
@@ -26,7 +26,8 @@ def check_lose_condition(attempts_remaining):
 # Return True if game is over, False otherwise.
 
 def is_game_over(hidden_letters, attempts_remaining):
-    ...
+    return check_win_condition(hidden_letters) or check_lose_condition(attempts_remaining)
+
 
 
 # Test your functions here!
@@ -35,26 +36,26 @@ if __name__ == "__main__":
     ### --- Test Function 1: check_win_condition --- ###
     
     ###Test 1.1 - Empty set (all letters guessed)###
-    # result = check_win_condition(set())
-    # print(result)  # Expected: True
+    result = check_win_condition(set())
+    print(result)  # Expected: True
     
     ###Test 1.2 - Set with letters remaining###
-    # result = check_win_condition({"p", "y", "n"})
-    # print(result)  # Expected: False
+    result = check_win_condition({"p", "y", "n"})
+    print(result)  # Expected: False
     
     ###Test 1.3 - Set with one letter remaining###
-    # result = check_win_condition({"x"})
-    # print(result)  # Expected: False
+    result = check_win_condition({"x"})
+    print(result)  # Expected: False
     
     ### --- Test Function 2: check_lose_condition --- ###
     
     ###Test 2.1 - Zero attempts remaining (lost)###
-    # result = check_lose_condition(0)
-    # print(result)  # Expected: True
+    result = check_lose_condition(0)
+    print(result)  # Expected: True
     
     ###Test 2.2 - Some attempts remaining###
-    # result = check_lose_condition(3)
-    # print(result)  # Expected: False
+    result = check_lose_condition(3)
+    print(result)  # Expected: False
     
     ###Test 2.3 - One attempt remaining###
     # result = check_lose_condition(1)
@@ -68,12 +69,12 @@ if __name__ == "__main__":
     ### --- Test Function 3: is_game_over --- ###
     
     ###Test 3.1 - Game won (no hidden letters remaining)###
-    # result = is_game_over(set(), 3)
-    # print(result)  # Expected: True (won)
+    result = is_game_over(set(), 3)
+    print(result)  # Expected: True (won)
     
     ###Test 3.2 - Game lost (no attempts remaining)###
-    # result = is_game_over({"c", "a", "t"}, 0)
-    # print(result)  # Expected: True (lost)
+    result = is_game_over({"c", "a", "t"}, 0)
+    print(result)  # Expected: True (lost)
     
     ###Test 3.3 - Game still in progress###
     # result = is_game_over({"a", "t"}, 4)
