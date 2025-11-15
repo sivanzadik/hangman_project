@@ -35,7 +35,18 @@ def is_already_guessed(letter, guessed_letters):
 # Return the valid letter.
 
 def get_valid_guess(guessed_letters):
-    ...
+    while True:
+        letter = get_letter_from_user()
+        if not is_valid_letter(letter):
+            print("Invalid input. Please enter a single letter.")
+        elif is_already_guessed(letter, guessed_letters):
+            print("You already guessed that letter. Try again!")
+        else:
+            return letter
+
+
+
+
 
 
 # Test your functions here!
@@ -100,9 +111,9 @@ if __name__ == "__main__":
     # This function requires user input, so test it manually by uncommenting:
 
     ###Test 4.1 - Test with empty guessed_letters###
-    # print("Enter a valid letter (any letter should work):")
-    # letter = get_valid_guess(set())
-    # print(f"Valid letter entered: {letter}")  # Expected: the valid letter you entered
+    print("Enter a valid letter (any letter should work):")
+    letter = get_valid_guess(set())
+    print(f"Valid letter entered: {letter}")  # Expected: the valid letter you entered
 
     ###Test 4.2 - Test with some already guessed letters###
     # print("Enter a valid letter that hasn't been guessed (try not to use 'a', 'b', or 'c'):")
