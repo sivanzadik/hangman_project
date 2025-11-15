@@ -26,7 +26,7 @@ def is_valid_letter(input_letter):
 # Return True if the letter is in the set, False otherwise.
 
 def is_already_guessed(letter, guessed_letters):
-    ...
+    return letter in guessed_letters
 
 
 # --- FUNCTION 4 ---
@@ -81,8 +81,8 @@ if __name__ == "__main__":
     ### --- Test Function 3: is_already_guessed --- ###
 
     ###Test 3.1###
-    # result = is_already_guessed("a", {"a", "b", "c"})
-    # print(result)  # Expected: True
+    result = is_already_guessed("a", {"a", "b", "c"})
+    print(result)  # Expected: True
 
     ###Test 3.2###
     # result = is_already_guessed("d", {"a", "b", "c"})
