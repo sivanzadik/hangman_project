@@ -72,7 +72,8 @@ def alphabet_display_with_guessed_letters_marked(letters_alphabet, guessed_lette
 # (The function will not return anything!)
 
 def update_letters_to_be_guessed(hidden_letters, letter):
-    ...
+    hidden_letters.discard(letter)
+
 
 
 # Test your functions here!
@@ -178,14 +179,14 @@ if __name__ == "__main__":
     ### --- Test Function 6: update_letters_to_be_guessed --- ###
     
     ###Test 6.1###
-    # hidden_letters = {"p", "y", "t", "h", "o", "n"}
-    # update_letters_to_be_guessed(hidden_letters, "p")
-    # print(hidden_letters)  # Expected: {"y", "t", "h", "o", "n"}
+    hidden_letters = {"p", "y", "t", "h", "o", "n"}
+    update_letters_to_be_guessed(hidden_letters, "p")
+    print(hidden_letters)  # Expected: {"y", "t", "h", "o", "n"}
     
     ###Test 6.2###
-    # hidden_letters = {"a", "b", "c"}
-    # update_letters_to_be_guessed(hidden_letters, "b")
-    # print(hidden_letters)  # Expected: {"a", "c"}
+    hidden_letters = {"a", "b", "c"}
+    update_letters_to_be_guessed(hidden_letters, "b")
+    print(hidden_letters)  # Expected: {"a", "c"}
     
     ###Test 6.3###
 
