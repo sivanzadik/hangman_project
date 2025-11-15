@@ -17,7 +17,7 @@ def get_letter_from_user():
 # (you can use .isalpha())
 
 def is_valid_letter(input_letter):
-    ...
+    return len(input_letter) == 1 and input_letter.isalpha()
 
 
 # --- FUNCTION 3 ---
@@ -51,20 +51,20 @@ if __name__ == "__main__":
     ### --- Test Function 2: is_valid_letter --- ###
 
     ###Test 2.1###
-    # result = is_valid_letter("G")
-    # print(result)  # Expected: True
+    result = is_valid_letter("G")
+    print(result)  # Expected: True
 
     ###Test 2.2###
-    # result = is_valid_letter("a")
-    # print(result)  # Expected: True
+    result = is_valid_letter("a")
+    print(result)  # Expected: True
 
     ###Test 2.3###
-    # result = is_valid_letter("tar")
-    # print(result)  # Expected: False
+    result = is_valid_letter("tar")
+    print(result)  # Expected: False
 
     ###Test 2.4###
-    # result = is_valid_letter("y-")
-    # print(result)  # Expected: False
+    result = is_valid_letter("y-")
+    print(result)  # Expected: False
 
     ###Test 2.5###
     # result = is_valid_letter("")
