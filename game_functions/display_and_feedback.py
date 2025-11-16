@@ -8,6 +8,8 @@
 
 from common.ascii_art import hangman_7_stages
 
+print(hangman_7_stages[0])
+
 def show_hangman(incorrect_guesses, hangman_art: list[str]=hangman_7_stages):
     return hangman_art [incorrect_guesses]
 
