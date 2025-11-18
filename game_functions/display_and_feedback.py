@@ -8,8 +8,6 @@
 
 from common.ascii_art import hangman_7_stages
 
-print(hangman_7_stages[0])
-
 def show_hangman(incorrect_guesses, hangman_art: list[str]=hangman_7_stages):
     return hangman_art [incorrect_guesses]
 
@@ -67,8 +65,8 @@ if __name__ == "__main__":
     #Expected: empty gallows (stage 0)
     
     ###Test 1.2 - Three incorrect guesses###
-    #print(show_hangman(3))
-    #Expected: head, body, one arm (stage 3)
+    print(show_hangman(3))
+    # Expected: head, body, one arm (stage 3)
     
     ###Test 1.3 - Six incorrect guesses (full hangman)###
     # print(show_hangman(6))
